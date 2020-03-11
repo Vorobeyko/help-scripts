@@ -1,0 +1,23 @@
+[http]
+	sslVerify = false
+[user]
+	name = Vorobeyko
+	email = sashavorobey95@gmail.com
+[alias]
+	fo = fetch origin
+	mom = merge origin/master
+	pullo = pull origin
+	pusho = push origin
+	npusho = ! git push --set-upstream origin $(git pbr)
+	pbr = ! git branch 2> /dev/null | sed -e /^[^*]/d -e s/*\\ /\\/
+	ch = checkout
+	chb = checkout -b
+	clall = clean -dfx
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+	ca = commit --amen
+	freset  = ! git checkout master && git fetch origin && git pull origin master && git clall
+	chm = checkout master
+	ca = commit --amen
+	cred-store = config credential.helper store
+[credential]
+	helper = store
