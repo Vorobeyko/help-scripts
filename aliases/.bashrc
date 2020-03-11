@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# git
-alias grom="git fetch && git rebase origin/master"
-alias gamen="git commit --amen"
-alias git:fullreset="git checkout master && git fetch origin && git pull origin master && git clean -dfx"
-
 #yarn
 alias yuil='yarn upgrade-interactive --latest'
 
