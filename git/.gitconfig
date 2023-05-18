@@ -1,8 +1,3 @@
-[http]
-	sslVerify = false
-[user]
-	name = Vorobeyko
-	email = sashavorobey95@gmail.com
 [alias]
 	fo = fetch origin
 	mom = merge origin/master
@@ -17,7 +12,7 @@
 	ca = commit --amen
 	freset  = ! git checkout master && git fetch origin && git pull origin master && git clall
 	chm = checkout master
+        chmp = ! git chm && git fo && git pull && git --no-pager log -n 1
 	ca = commit --amen
 	cred-store = config credential.helper store
-[credential]
-	helper = store
+	graphlog = log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%an%C(reset)%C(bold yellow)%d%C(reset) %C(dim white)- %s%C(reset)' --all
